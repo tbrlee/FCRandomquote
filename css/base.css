@@ -7,3 +7,17 @@ color: midnightblue;
     margin-top: 0;
 }
 
+#imgbutton {
+margin-bottom: 10px; 
+cursor: pointer;
+}
+
+
+#imgbutton:hover {
+ box-shadow: 0 5px 15px rgba(13,84,150, 0.7);
+}
+ 
+quote {
+    font-style: oblique;
+    font-size 2em;
+}
