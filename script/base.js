@@ -7,6 +7,20 @@ $(function() {
          $(this).css('opacity', '1.0');
     });
 
-var quoteapi = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback";
+
+
+function randQuote() {
+var url = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
+
+    $.getJSON(url, function(data){
+        $("#arthquote").html('"' + data.quoteText + '"');
+        $("#author").html('-' + data.quoteAuthor);
+    });
+
+}
+
+    $("#imgbutton").click(function() {
+        randQuote();
+    });
 
 });
